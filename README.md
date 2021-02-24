@@ -10,7 +10,7 @@ beautifulsoup4-4.9.3
 logomaker-0.8 
 `$ pip3 install logomaker`
 ## Installation  
-Download the mg.py script in a working directory
+Download the mg.py script in a working directory.
 ## Input Files 
 MotifGenie requires a pfm file from the JASPAR database as input, hence the mg.py script must be in the same directory as the pfm file. Pfm file contains a Position Frequency Matrix of the motif to be searched.
 
@@ -54,7 +54,7 @@ mg.py [-h] -jf JASPARFILE -cl CELLLINE -locus LOCUS -pit
 
 `python mg.py -jf MA0112.1.pfm -cl MCF-7 -locus chr5:139638349-139693882 -pit 20`
 - This search is similar to the above one but does a core motif search by inputting the threshold ratio for consensus (-trc) value.
-- 
+
 `python mg.py -jf MA0112.1.pfm -cl MCF-7 -locus chr5:139638349-139693882 -pit 20 -trc 0.7 -cms`
 - This does search on the overlapping sequences of CXXC5 gene's sequences obtained from the UCSC database, and the peak sequences. The search also uses core motif search and specifies the number of outputs (-n) to be 35 motifs.
 
