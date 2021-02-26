@@ -24,7 +24,7 @@ An example pfm file of the ESR1 transcription factor from the JASPAR database, w
 ```
 ## How To Run
 ### Parameters
-MotifGenie is used by a set of required and optional arguments through the command line interface. MotifGenie does search on the hg38 genome.
+MotifGenie is used by a set of required and optional arguments through the command line interface. MotifGenie does search on the hg38 genome. The cell line information to be inputted must be present in CellLine_list.txt found in the repository. Also, the name of the Transcription Factor pfm file to be inputted must be present in the TF_list.txt file which is found in the repository. If the TF name is not in the list, peaks will not be found.
 
 The **required** arguments include:
 - `-jf JASPARFILE` or `--jasparFile JASPARFILE`: Pfm file name from JASPAR. (for example MA0112.1.pfm)
