@@ -95,6 +95,5 @@ TGGGCGCTAGCGGCTGCGT           4.650896            127737810 - 127737828         
 - `ENTRY`: the entry number referring to the UCSC database, in which the sequence for the inputted gene was found. This column is only presented for gene-specific search.
 
 Sample Sequence Logo output of the above result
-![MA01391](https://user-images.githubusercontent.com/38559757/109418325-e82b9800-79d8-11eb-984d-1e0daa8ae6b4.png)
-
+![MA01391](https://user-images.githubusercontent.com/38559757/109424770-33a06f00-79f6-11eb-83ec-fdbf9fc6b904.png)
 
