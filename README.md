@@ -67,17 +67,23 @@ MotifGenie outputs the search results as a table in the command line interface. 
 
 A sample output:
 ```
---------------------------------------------------------------------------------------------------------------------------
-MOTIF SEARCH IN PEAK SEQUENCES OF CXXC5 GENE with CORE MOTIF
-Threshold to trim consensus = 0.7
---------------------------------------------------------------------------------------------------------------------------
-SEQUENCE                      SCORE               POSITION                      PARALLELITY    PEAK           ENTRY
---------------------------------------------------------------------------------------------------------------------------
-GGCCAGGGTCACCT                18.064151           139651263 - 139651276         -              peak5          NM_001317200
-GGCCAGGGTCACCT                18.064151           139651263 - 139651276         -              peak5          NM_001317201
-GGCCAGGGTCACCT                18.064151           139651263 - 139651276         -              peak5          NM_001317205
-GGCCAGGGTCACCT                18.064151           139651263 - 139651276         -              peak5          NM_001317204
-GGCCAGGGTCACCT                18.064151           139651263 - 139651276         -              peak5          NM_001317202
+SEQUENCE                      SCORE               POSITION                      PARALLELITY     PEAK
+-----------------------------------------------------------------------------------------------------
+GTGTGCCCTCTACTGGCAG           9.342963            127734105 - 127734123         -               peak1
+TTGCGCCACCTGAAGGAGA           8.430384            127737843 - 127737861         -               peak3
+CCGCCCCCTCTCTGGGCAG           6.603304            127734156 - 127734174         -               peak1
+GCCGCGGGAGGTGGCGGTG           6.159184            127737898 - 127737916         +               peak3
+GGGTCAGGTGGGGGCAGGA           6.014313            127734051 - 127734069         +               peak1
+CGCCCTTAAGAAGCCGCGG           5.780073            127737910 - 127737928         +               peak3
+GCGCCACCTGAAGGAGAAG           5.735097            127737841 - 127737859         +               peak3
+GGGGCAGGAGCAGGAGCGT           5.678570            127734041 - 127734059         +               peak1
+TCCAGCCACCTCCTTGTTA           5.543466            127733968 - 127733986         -               peak1
+TCCACCCTAGCCGGCCGCC           5.353720            127736273 - 127736291         +               peak2
+CCACCTGAAGGAGAAGGCG           5.330792            127737838 - 127737856         +               peak3
+TTTCCAGCGGGGGAAGGAC           5.273824            127734009 - 127734027         +               peak1
+TTGGCTGCAGAAGGTCCGA           5.217327            127733939 - 127733957         +               peak1
+CTGCCTCTCGCTGGAATTA           4.891351            127736242 - 127736260         +               peak2
+TGGGCGCTAGCGGCTGCGT           4.650896            127737810 - 127737828         +               peak3
 ```
 
 - `HEADER`: the summary of the search parameters such as, whether a specific gene name was specified, core motif search was used and the inputted consensus trimming threshold.
@@ -88,6 +94,7 @@ GGCCAGGGTCACCT                18.064151           139651263 - 139651276         
 - `PEAK`: the number of peak sequence where the motif was found on.
 - `ENTRY`: the entry number referring to the UCSC database, in which the sequence for the inputted gene was found. This column is only presented for gene-specific search.
 
-Sample Sequence Logo output (not related to the above result):
-![MA0112 1 pfm-MOTIF SEARCH IN PEAK SEQUENCES OF CXXC5](https://user-images.githubusercontent.com/38559757/109000332-9fac6b80-76b4-11eb-97a3-3d7e2a7e1623.png)
+Sample Sequence Logo output (not related to the above result
+![MA01391](https://user-images.githubusercontent.com/38559757/109418325-e82b9800-79d8-11eb-984d-1e0daa8ae6b4.png)
+
 
