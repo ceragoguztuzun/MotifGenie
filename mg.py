@@ -7,6 +7,7 @@ import sys
 import matplotlib.pyplot as plt
 plt.ion()
 import logomaker as lm
+import math
 
 
 jasparfileName = None
@@ -116,12 +117,20 @@ def displaySeqLogo( list_of_motifs, search_type, jasparfileName):
         store_frequencies.append(zeros)
 
     store_frequencies = np.asarray(store_frequencies)
+
+    for x in range(store_frequencies.shape[0]):
+        hu = (store_frequencies[x][0]+0.01)*np.log2(store_frequencies[x][0]+0.01)+(store_frequencies[x][1]+0.01)*np.log2(store_frequencies[x][1]+0.01)+(store_frequencies[x][2]+0.01)*np.log2(store_frequencies[x][2]+0.01)+(store_frequencies[x][3]+0.01)*np.log2(store_frequencies[x][3]+0.01)
+        store_frequencies[x][0] = store_frequencies[x][0]*(2.0+hu)
+        store_frequencies[x][1] = store_frequencies[x][1]*(2.0+hu)
+        store_frequencies[x][2] = store_frequencies[x][2]*(2.0+hu)
+        store_frequencies[x][3] = store_frequencies[x][3]*(2.0+hu)
+
     table_of_frequencies = pd.DataFrame(store_frequencies, columns=['A', 'C', 'G', 'T']) # ---> table of frequencies obtained
     
     name = jasparfileName + "-" + search_type
     logo = lm.Logo(table_of_frequencies, stack_order = "big_on_top")
     logo.ax.set_xlabel('Position\n('+name+")",fontsize=10)
-    logo.ax.set_ylabel("Frequency", labelpad=-1,fontsize=10)
+    logo.ax.set_ylabel("Entropy (bits)", labelpad=-1,fontsize=10)
     #logo.savefig(name + '.png', bbox_inches='tight')
     logo.ax.figure.canvas.start_event_loop(sys.float_info.min) #workaround for Exception in Tkinter callback
     logo.ax.figure.savefig(name+".png", dpi=300, bbox_inches='tight') 
