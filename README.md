@@ -3,6 +3,12 @@ MotifGenie is a Python command line tool for searching transcription factor bind
 
 *By:* Çerağ Oğuztüzün, Pelin Yaşar, Kerim Yavuz, Mesut Muyan, Tolga Can
 
+
+## Workflow  
+![MotifGenieWorkflow](https://user-images.githubusercontent.com/38559757/114838020-f85ad380-9ddc-11eb-9643-86b475f34198.png)
+
+MotifGenie is composed of two main modules: 1) finding common binding regions in multiple ChIP-Seq samples and 2) searching for binding sequences using a binding profile of a transcription factor. Peaks identified by MACS 2.0 for 11,286 samples in the Cistrome database are used by the first module. Given a cell line, a TF, a genomic locus, and an occurrence percentage threshold t, the first module initially identifies the subset of samples for the given cell line and the TF. Then, it scans each bed file in that subset for the given genomic locus. The second module uses the JASPAR TF binding profile and searches the genomic sequences in common binding regions. Sequences from the human reference genome, hg38, as provided by the UCSC Genome Browser are used. Top 15 highest scoring sequences in binding regions are given as the output of MotifGenie. A sequence logo of the top-scoring binding sequences is also generated if the corresponding command line option is used.
+
 ## Requirements 
 beautifulsoup4-4.9.3
 `$ pip3 install bs3` 
