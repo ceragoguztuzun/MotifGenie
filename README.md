@@ -3,6 +3,7 @@ MotifGenie is a Python command line tool for searching transcription factor bind
 
 *By:* Çerağ Oğuztüzün, Pelin Yaşar, Kerim Yavuz, Mesut Muyan, Tolga Can
 ![mg1](https://user-images.githubusercontent.com/38559757/117874575-cdfc1900-b2a9-11eb-8677-bf2997f75091.jpg)
+*Artwork by:* [brenazan](https://www.instagram.com/brenazan/)
 
 
 ## Workflow  
